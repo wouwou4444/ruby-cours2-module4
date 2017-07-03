@@ -55,7 +55,7 @@ Rails.application.routes.draw do
   #   end
 
   resources :todo_lists do
-    resources :todo_items, only: [:create, :new, :edit, :update, :destroy]
+    resources :todo_items, only: [:create, :new, :edit, :update, :destroy, :show]
   end
   root to: "todo_lists#index"
 end

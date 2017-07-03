@@ -11,8 +11,8 @@ class TodoItemsController < ApplicationController
 
   # GET /todo_items/1
   # GET /todo_items/1.json
-  #def show
-  #end
+  def show
+  end
 
   # GET /todo_items/new
   def new
