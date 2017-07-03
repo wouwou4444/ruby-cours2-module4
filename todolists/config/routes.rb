@@ -53,4 +53,9 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  resources :todo_lists do
+    resources :todo_items, only: [:create, :new, :edit, :update, :destroy]
+  end
+  root to: "todo_lists#index"
 end
