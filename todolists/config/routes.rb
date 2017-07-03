@@ -56,6 +56,8 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
+  root to: "todo_lists#index"
+  
   resources :todo_lists do
     resources :todo_items, only: [:create, :new, :edit, :update, :destroy, :show]
   end
@@ -65,5 +67,5 @@ Rails.application.routes.draw do
   get "/login" => "sessions#new", as: "login"
   delete "/logout" => "sessions#destroy", as: "logout"
   
-  root to: "todo_lists#index"
+
 end
