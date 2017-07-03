@@ -1,3 +1,7 @@
+<h2>
+  <strong>Todo List:</strong>
+  <%= @todo_list.list_name %>
+</h2>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -20,5 +24,5 @@
   <%= @todo_item.completed %>
 </p>
 
-<%= link_to 'Edit', edit_todo_item_path(@todo_item) %> |
-<%= link_to 'Back', todo_items_path %>
+<%= link_to 'Edit', edit_todo_list_todo_item_path(@todo_list, @todo_item) %> |
+<%= link_to 'Back', @todo_list %>
